@@ -1,6 +1,8 @@
 const myEvery = (arr, callback) => {
   for (const value of arr) {
-    if (callback) return false;
+    if (!(callback(value))) return false;   
+    /* why does this work too --> 
+      if (callback(value) == false) return false; --> double equals */ 
   }
   return true;
 };
