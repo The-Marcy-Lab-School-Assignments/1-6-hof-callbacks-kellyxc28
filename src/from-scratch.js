@@ -56,7 +56,18 @@ const sortUsersByOrder = (arr) => {
     return arrCopy.sort((a, b) => a.order - b.order);
 };
 
-const sortUsersByName = () => {
+const sortUsersByName = (arr) => {
+    const arrCopy = [...arr];
+    return arrCopy.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      else if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    }
+    );
 };
 
 module.exports = {
