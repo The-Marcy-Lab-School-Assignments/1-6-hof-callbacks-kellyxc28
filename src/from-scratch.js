@@ -21,7 +21,15 @@ const myFind = (arr, callback) => {
   }
 };
 
-const myFilter = () => {
+const myFilter = (arr, callback) => {
+    const passedFilter = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (callback(arr[i])) {
+        passedFilter.push(arr[i]);
+      }
+    }
+
+    return passedFilter;
 };
 
 const sortWords = () => {
