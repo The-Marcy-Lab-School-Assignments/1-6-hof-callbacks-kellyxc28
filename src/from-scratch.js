@@ -1,4 +1,7 @@
-const myForEach = () => {
+const myForEach = (arr, callback) => {
+    for (let i = 0; i < arr.length; i++) {
+      callback(arr[i]);
+    }
 };
 
 const myMap = () => {
