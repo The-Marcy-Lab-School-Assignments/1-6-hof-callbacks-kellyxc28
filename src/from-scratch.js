@@ -39,24 +39,21 @@ const sortWords = (arr) => {
 };
 
 const sortNumbers = (arr) => {
-  const arrCopy = [...arr];
-  return arrCopy.sort((a, b) => a - b);
+    const arrCopy = [...arr];
+    return arrCopy.sort((a, b) => a - b);
 };
 
 const sortNumbersBetter = (arr, isDescending) => {
-  const arrCopy = [...arr];
-  if (isDescending) {
-    return arrCopy.sort((a, b) => b - a);
-  }
-  return arrCopy.sort((a, b) => a - b);
+    const arrCopy = [...arr];
+    if (isDescending) {
+      return arrCopy.sort((a, b) => b - a);
+    }
+    return arrCopy.sort((a, b) => a - b);
 };
 
 const sortUsersByOrder = (arr) => {
-  const arrCopy = [...arr];
-  for (let i = 0; i < arr.length; i++) {
+    const arrCopy = [...arr];
     return arrCopy.sort((a, b) => a.order - b.order);
-  };
-  return [];
 };
 
 const sortUsersByName = () => {
