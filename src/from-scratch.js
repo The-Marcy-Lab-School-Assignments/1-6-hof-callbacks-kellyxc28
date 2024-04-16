@@ -32,10 +32,15 @@ const myFilter = (arr, callback) => {
     return passedFilter;
 };
 
-const sortWords = () => {
+const sortWords = (arr) => {
+    const arrCopy = [...arr];
+    const sortedElems = arrCopy.sort();
+    return sortedElems;
 };
 
-const sortNumbers = () => {
+const sortNumbers = (arr) => {
+  const arrCopy = [...arr];
+  return arrCopy.sort((a,b) => a - b);
 };
 
 const sortNumbersBetter = () => {
