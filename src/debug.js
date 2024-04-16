@@ -8,7 +8,9 @@ const myEvery = (arr, callback) => {
 };
 
 const sortUsersBy = (users, sortingFunction) => {
-  return [...users].sort(sortingFunction());
+  /* the () at the end of sortingFunction is not needed because nothing 
+  is passed in - the specific sorting function is called */ 
+  return [...users].sort(sortingFunction);
 };
 
 const logEachName = (names) => {
