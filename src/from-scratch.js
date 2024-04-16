@@ -43,7 +43,12 @@ const sortNumbers = (arr) => {
   return arrCopy.sort((a,b) => a - b);
 };
 
-const sortNumbersBetter = () => {
+const sortNumbersBetter = (arr, isDescending) => {
+  const arrCopy = [...arr];
+  if (isDescending) {
+    return arrCopy.sort((a,b) => b - a);
+  }
+  return arrCopy.sort((a,b) => a - b);
 };
 
 const sortUsersByOrder = () => {
