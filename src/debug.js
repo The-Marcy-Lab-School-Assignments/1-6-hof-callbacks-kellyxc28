@@ -14,7 +14,13 @@ const sortUsersBy = (users, sortingFunction) => {
 };
 
 const logEachName = (names) => {
-  return names.forEach(console.log());
+  return names.forEach((name, index, names) => {
+      console.log(name, index, names);
+    }
+  );
+  
+  // short way: 
+  // return names.forEach(console.log);
 };
 
 const logEachUserBio = (users) => {
