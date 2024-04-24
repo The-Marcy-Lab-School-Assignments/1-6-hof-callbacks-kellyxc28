@@ -1,5 +1,5 @@
 /** FEEDBACK: Great job getting all test cases to pass! */
-const myForEach = (arr, callback) => {
+const myForEach = (arr, callback) => {  // fancy for-loop 
     for (let i = 0; i < arr.length; i++) {
       callback(arr[i]);
     }
@@ -8,7 +8,7 @@ const myForEach = (arr, callback) => {
 const myMap = (arr, callback) => {
     const returnVals = [];
     for (let i = 0; i < arr.length; i++) {
-      returnVals.push(callback(arr[i]));
+      returnVals.push(callback(arr[i]));  // results of the callbacks return values 
     }
 
     return returnVals;
@@ -16,8 +16,8 @@ const myMap = (arr, callback) => {
 
 const myFind = (arr, callback) => {
   for (let i = 0; i < arr.length; i++) {
-    if (callback(arr[i])) {
-      return arr[i];
+    if (callback(arr[i])) { // first sign of truthy value 
+      return arr[i];        // gets returned 
     }
   }
 };
@@ -25,8 +25,8 @@ const myFind = (arr, callback) => {
 const myFilter = (arr, callback) => {
     const passedFilter = [];
     for (let i = 0; i < arr.length; i++) {
-      if (callback(arr[i])) {
-        passedFilter.push(arr[i]);
+      if (callback(arr[i])) {   // if truthy 
+        passedFilter.push(arr[i]);  // add to the array 
       }
     }
 
@@ -41,24 +41,26 @@ const sortWords = (arr) => {
 
 const sortNumbers = (arr) => {
     const arrCopy = [...arr];
-    return arrCopy.sort((a, b) => a - b);
+    return arrCopy.sort((a, b) => a - b);   // ascending order 
 };
 
 const sortNumbersBetter = (arr, isDescending) => {
     const arrCopy = [...arr];
-    if (isDescending) {
-      return arrCopy.sort((a, b) => b - a);
+    if (isDescending) {   // if isDescending is true 
+      return arrCopy.sort((a, b) => b - a);   // sort in descending order 
     }
-    return arrCopy.sort((a, b) => a - b);
+    return arrCopy.sort((a, b) => a - b);     // sort in ascending order otherwise 
 };
 
 const sortUsersByOrder = (arr) => {
     const arrCopy = [...arr];
+    // sorting in ascending order 
     return arrCopy.sort((a, b) => a.order - b.order);
 };
 
 const sortUsersByName = (arr) => {
     const arrCopy = [...arr];
+    // sorting in alphabetical order 
     return arrCopy.sort((a, b) => {
       if (a.name < b.name) {
         return -1;
@@ -71,6 +73,8 @@ const sortUsersByName = (arr) => {
     );
 };
 
+
+// named exports 
 module.exports = {
   myForEach,
   myMap,

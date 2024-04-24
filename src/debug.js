@@ -1,6 +1,6 @@
 const myEvery = (arr, callback) => {
   for (const value of arr) {
-    if (!(callback(value))) return false;   
+    if (!(callback(value))) return false;  // any sign of false, return false  
     /* why does this work too --> 
       if (callback(value) == false) return false; --> double equals */ 
   }
@@ -15,7 +15,7 @@ const sortUsersBy = (users, sortingFunction) => {
 
 const logEachName = (names) => {
   return names.forEach((name, index, names) => {
-      console.log(name, index, names);
+    console.log(name, index, names);
     }
   );
   
@@ -29,6 +29,7 @@ const logEachUserBio = (users) => {
   });
 };
 
+// named exports 
 module.exports = {
   myEvery,
   sortUsersBy,
